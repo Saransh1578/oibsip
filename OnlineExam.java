@@ -125,13 +125,13 @@ public class OnlineExam {
         {
             System.out.println("Login successful! Starting the exam...");
         Question[] questions = {
-    new Question("What is the output of the following Java code?\n\npublic class Main {\n    public static void main(String[] args) {\n        int x = 5;\n        System.out.println(x++);\n        System.out.println(x);\n    }\n}", new String[]{"5\t6", "6\t6", "5\t5", "6\t5"}, 2),
+    new Question("What is the output of the following Java code?\n\npublic class Main {\n    public static void main(String[] args) {\n        int x = 5;\n        System.out.println(x++);\n        System.out.println(x);\n    }\n}", new String[]{"6\t6", "5\t6", "5\t5", "6\t5"}, 2),
     
     new Question("Which keyword is used to define a class in Java?", new String[]{"class", "struct", "interface", "package"}, 1),
     
     new Question("What does the 'static' keyword mean in Java?", new String[]{"It makes a method or variable belong to the class, rather than an instance of the class", "It indicates that a method can be overridden in subclasses", "It makes a variable constant and cannot be changed", "It allows a method to be accessed by any other class"}, 1),
     
-    new Question("What is the result of 9 % 4 in Java?", new String[]{"2", "2.25", "2.5", "1"}, 4),
+    new Question("What is the result of 9 % 4 in Java?", new String[]{"1", "2.25", "2.5", "2"}, 4),
     
     new Question("Which data structure uses LIFO (Last-In-First-Out) order?", new String[]{"Queue", "Stack", "Heap", "Linked List"}, 2),
     
@@ -139,13 +139,12 @@ public class OnlineExam {
     
     new Question("What is polymorphism in Java?", new String[]{"Polymorphism is the ability of a variable, function, or object to take on multiple forms", "Polymorphism is the process of hiding the implementation details and showing only functionality", "Polymorphism is the process of creating multiple instances of a class", "Polymorphism is the process of extending a class to create a subclass"}, 1),
     
-    new Question("What is the 'try-with-resources' statement in Java?", new String[]{"It ensures that each resource is properly closed at the end of the statement", "It catches exceptions that occur within a block of code", "It allows multiple exceptions to be caught within a single catch block", "It allows for conditional execution of code"}, 1),
+    new Question("What is the 'try-with-resources' statement in Java?", new String[]{ "It catches exceptions that occur within a block of code", "It allows multiple exceptions to be caught within a single catch block","It ensures that each resource is properly closed at the end of the statement", "It allows for conditional execution of code"}, 3),
     
     new Question("What is the purpose of the 'transient' keyword in Java?", new String[]{"It indicates that a variable should not be serialized", "It indicates that a variable cannot be accessed by subclasses", "It indicates that a variable should be synchronized", "It indicates that a variable should be static"}, 1),
     
-    new Question("What is a lambda expression in Java?", new String[]{"It is an anonymous function that can be passed around as if it were a variable", "It is a function that can be called from anywhere in the code", "It is a function that must be called with specific arguments", "It is a predefined function in the Java standard library"}, 1),
+    new Question("What is a lambda expression in Java?", new String[]{ "It is a function that can be called from anywhere in the code","It is an anonymous function that can be passed around as if it were a variable", "It is a function that must be called with specific arguments", "It is a predefined function in the Java standard library"}, 2),
 };
-
 
         Exam exam = new Exam(questions, 30); 
         exam.startExam();
